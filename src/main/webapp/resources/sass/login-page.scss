@@ -1,0 +1,27 @@
+$main-color: #e0e3e0;
+body {
+  color: $main-color;
+  background-color: #232323;
+  font-family: sans-serif;
+}
+.input{
+  background: #000;
+  color: $main-color;
+  border-color: rgba(0, 255, 180, 0.75);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 3px 5px;
+  min-width: 5em;
+  font-family: Consolas, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 16px;
+}
+#err-msg {
+  font-size: 18px;
+  font-family: Consolas, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: #ff0062;
+}
