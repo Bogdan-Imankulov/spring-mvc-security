@@ -1,13 +1,6 @@
-$main-color: #e0e3e0;
-* {
-  margin: 0;
-  padding: 0;
-}
+@import "template";
 
 body {
-  color: $main-color;
-  background-color: #232323;
-  font-family: sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,12 +26,19 @@ input {
   font-size: 16px;
 }
 
-#err-msg {
+.msg {
   font-size: 18px;
   font-family: Consolas, sans-serif;
   font-weight: bold;
   font-style: italic;
+}
+
+#err-msg {
   color: #ff0062;
+}
+
+#logout-msg {
+  color: #18d53a;
 }
 
 p {
@@ -55,6 +55,12 @@ input[type=submit] {
   font-size: 28px;
   align-self: center;
   justify-self: center;
+  cursor: pointer;
+  background-color: #aaa;
+}
+
+input[type=submit]:hover {
+  background-color: #eee;
 }
 
 h3 {

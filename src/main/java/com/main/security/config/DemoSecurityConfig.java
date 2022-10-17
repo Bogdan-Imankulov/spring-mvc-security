@@ -6,6 +6,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
+
 import static org.springframework.security.core.userdetails.User.UserBuilder;
 
 @Configuration
@@ -24,12 +25,15 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-		.antMatchers("/resources/**").permitAll()
+				.antMatchers("/resources/**").permitAll()
 				.anyRequest().authenticated()
 				.and()
 				.formLogin()
 				.loginPage("/login-page")
 				.loginProcessingUrl("/login-processing-page")
+				.permitAll()
+				.and()
+				.logout()
 				.permitAll();
 	}
 }

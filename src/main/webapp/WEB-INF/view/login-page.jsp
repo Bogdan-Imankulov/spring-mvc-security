@@ -22,7 +22,10 @@
                method = "post">
         <div id = "form-content">
             <c:if test = "${param.error != null}">
-                <p id = "err-msg">You entered invalid username or password! Please try again</p>
+                <p id = "err-msg" class = "msg">You entered invalid username or password! Please try again</p>
+            </c:if>
+            <c:if test = "${param.logout != null}">
+                <p id = "logout-msg" class = "msg">You have been logged out</p>
             </c:if>
             <p>
                 Username: <label>

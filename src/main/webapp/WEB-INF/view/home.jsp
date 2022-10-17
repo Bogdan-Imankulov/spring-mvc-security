@@ -1,3 +1,4 @@
+<%@ taglib prefix = "form" uri = "http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: bagai
@@ -9,8 +10,13 @@
 <html>
 <head>
     <title>Home page</title>
+    <link rel = "stylesheet" type = "text/css"
+          href = "${pageContext.request.contextPath}/resources/static/css/home-page.css">
 </head>
 <body>
-    <h1 style="font-size: 30px; color: #cc009e">welcome to home page</h1>
+<h1 style = "font-size: 30px; color: #cc009e">welcome to home page</h1>
+<form:form action = "${pageContext.request.contextPath}/logout" method = "post">
+    <input type = "submit" value = "LOGOUT">
+</form:form>
 </body>
 </html>

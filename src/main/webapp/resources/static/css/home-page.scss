@@ -1,0 +1,18 @@
+@import "template";
+
+input[type=submit] {
+  margin: 10px;
+  padding: 1% 2%;
+  font-size: 28px;
+  align-self: center;
+  justify-self: center;
+}
+
+input {
+  border-radius: 10px;
+  padding: 3px 5px;
+  min-width: 5em;
+  font-family: Consolas, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}

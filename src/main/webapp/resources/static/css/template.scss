@@ -1,0 +1,11 @@
+$main-color: #e0e3e0;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $main-color;
+  background-color: #232323;
+  font-family: sans-serif;
+}
