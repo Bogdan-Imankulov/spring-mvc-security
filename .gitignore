@@ -5,3 +5,5 @@ target/
 Gruntfile.js
 package-lock.json
 package.json
+*.css
+*.css.map
