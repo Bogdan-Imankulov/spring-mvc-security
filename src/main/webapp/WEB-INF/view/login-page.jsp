@@ -7,31 +7,36 @@
 --%>
 <%@ page contentType = "text/html; ISO-8859-1;charset=UTF-8" language = "java" %>
 <%@ taglib prefix = "form" uri = "http://www.springframework.org/tags/form" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/login-page.css">
+    <link rel = "stylesheet" type = "text/css"
+          href = "${pageContext.request.contextPath}/resources/static/css/login-page.css">
 </head>
 <body>
-<h3>Login page</h3>
-<form:form action = "${pageContext.request.contextPath}/login-processing-page"
-           method = "post">
-    <c:if test="${param.error != null}">
-        <p id="err-msg">You entered invalid username or password! Please try again</p>
-    </c:if>
-    <p>
-        Username: <label>
-        <input type = "text" name = "username">
-    </label>
-    </p>
-    <p>
-        Password: <label>
-        <input type = "password" name = "password">
-    </label>
-    </p>
-    <input type = "submit" value = "login">
-</form:form>
+<main>
+    <h3>Login page</h3>
+    <form:form action = "${pageContext.request.contextPath}/login-processing-page"
+               method = "post">
+        <div id = "form-content">
+            <c:if test = "${param.error != null}">
+                <p id = "err-msg">You entered invalid username or password! Please try again</p>
+            </c:if>
+            <p>
+                Username: <label>
+                <input type = "text" name = "username">
+            </label>
+            </p>
+            <p>
+                Password: <label>
+                <input type = "password" name = "password">
+            </label>
+            </p>
+        </div>
+        <input type = "submit" value = "LOGIN">
+    </form:form>
+</main>
 </body>
 </html>

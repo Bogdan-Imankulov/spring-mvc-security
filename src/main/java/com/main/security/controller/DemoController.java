@@ -10,6 +10,6 @@ public class DemoController {
 
 	@GetMapping("/")
 	public String getHome() {
-		return "/WEB-INF/view/home.jsp";
+		return "home";
 	}
 }
