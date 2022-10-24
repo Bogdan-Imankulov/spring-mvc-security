@@ -1,4 +1,5 @@
 <%@ taglib prefix = "form" uri = "http://www.springframework.org/tags/form" %>
+<%@ taglib prefix = "security" uri = "http://www.springframework.org/security/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: bagai
@@ -18,5 +19,21 @@
 <form:form action = "${pageContext.request.contextPath}/logout" method = "post">
     <input type = "submit" value = "LOGOUT">
 </form:form>
+<p>
+    User:
+    <security:authentication property = "principal.username" /> <br />
+    Role:
+    <security:authentication property = "principal.authorities" />
+</p>
+<security:authorize access = "hasRole('MANAGER')">
+    <p>
+        <a href = "${pageContext.request.contextPath}/leaders/leaders-page">Leaders page</a>
+    </p>
+</security:authorize>
+<security:authorize access = "hasRole('ADMIN')">
+    <p>
+        <a href = "${pageContext.request.contextPath}/admins/admins-page">Admins page</a>
+    </p>
+</security:authorize>
 </body>
 </html>
